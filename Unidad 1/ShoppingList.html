@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <form>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </form>
+
+<ul id="lista">
+
+</ul>
+
+<script>
+    const lista = document.getElementById("lista"); 
+    const texto = document.getElementById("item");
+    const boton = document.getElementById("boton");
+
+    //el primer parametro del addEventListener es el evento que se va a manejar
+    boton.addEventListener(  'click', (event) => {
+                  const newItem = texto.value;
+          texto.vaule = ' ';
+
+          //creamos un nuevo elelmento 
+          const listItem = documen .createElemnt("li");  //elementi de lista "li"
+          const listText = documen .createElemnt("span"); //seccion del texto
+          const listBtn = documen .createElemnt("button"); //seccion del texto
+
+          listItem.appenChild(listText);
+          listText.textContent = "Delete";
+
+          lista.appendChild(listItem)
+      } );
+
+
+</script>          
+  </body>
+</html>
